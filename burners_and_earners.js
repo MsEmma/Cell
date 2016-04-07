@@ -92,9 +92,42 @@ exports.getFaceblockNonUsers = function(personApp) {
   return faceblockNonUsers;
 }
 
+var data = [ { name: 'Walter', data: 67 },
+             { name: 'Gus', data: 150 },
+             { name: 'Saul', data: 283 },
+             { name: 'Jesse', data: 300 } ]
+
 var personApp = {
   Walter: ['Faceblock', 'Instantgam'],
   Jesse: ['Faceblock', 'Instantgam', 'Tooter', 'Snaptalk', 'LankedOn'],
   Saul: ['Faceblock', 'Instantgam', 'LankedOn'],
   Gus: ['Instantgam', 'Tooter']
 };
+
+var ratios = [{app : "Tooter", ratio : 2},
+              {app : "Faceblock", ratio : 2},
+              {app : "Instantgam", ratio : 3},
+              {app : "Snaptalk", ratio : 6},
+              {app : "LankedOn", ratio : 1}];
+
+ratioArr = [];
+
+personApp.Walter.forEach(function(str){
+  ratios.forEach(function(obj){
+    if(obj.app === str){
+      ratioArr.push(obj.ratio)
+    }
+  })
+})
+
+var total = ratioArr.reduce(function(a,b){
+  return a + b;
+})
+
+console.log(total);
+
+data.forEach(function(obj){
+  if(obj.name === "Walter"){
+
+  }
+})

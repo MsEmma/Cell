@@ -69,13 +69,4 @@ describe("burners_and_earners", function() {
     assert.deepEqual(result, ["Gus"]);
   });
 
-
-
-
-
-
-
-
-
-
 });
