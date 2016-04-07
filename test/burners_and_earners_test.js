@@ -45,7 +45,7 @@ describe("burners_and_earners", function() {
                                Gus: [ 'Instantgam', 'Tooter' ] });
   });
 
-  it("should return who uses the least data", function() {
+  it("should return who uses the most apps", function() {
     result = burners_and_earners.getMostApps({ Walter: [ 'Faceblock', 'Instantgam' ],
                                                Jesse: [ 'Faceblock', 'Instantgam', 'Tooter', 'Snaptalk', 'LankedOn' ],
                                                Saul: [ 'Faceblock', 'Instantgam', 'LankedOn' ],
